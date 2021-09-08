@@ -1,0 +1,59 @@
+<html xmlns:th="http://www.thymeleaf.org" 
+th:replace="~{/layout/index::dynamic(~{::main})}">
+<body>
+<main>
+<form th:action="@{/security/login/form}" method="POST">
+<div class="panel panel-primary">
+	<div class="panel-heading">ĐĂNG KÍ</div>
+	<div class="panel-body">
+		<div class="row">
+			<div class="col-sm-4 text-center">
+				<label for="image">
+					<img ng-src="{{'/assets/images/'+ form.image}}" style="max-width: 100% ; height: 200px">
+				</label>
+			</div>
+		<div class="col-sm-8">
+			<div class="row">
+				<div class="form-group col-sm-6">
+					<div>Username</div>
+					<input ng-model="form.username" class="form-control">
+				</div>
+				
+				<div class="form-group col-sm-6">
+					<div>Password</div>
+					<input ng-model="form.password" class="form-control">
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="form-group col-sm-6">
+					<div >Photo</div>
+					<input type="file" class="form-control" id="image"
+						onchange="angular.element(this).scope().imageChanged(this.files)">
+				</div>
+				
+				<div class="form-group col-sm-6">
+					<div>Fullname</div>
+					<input ng-model="form.fullname" class="form-control">
+				</div>
+				
+				<div class="form-group col-sm-6">
+					<div>Email</div>
+					<input ng-model="form.email" class="form-control">
+				</div>
+			</div>	
+		</div>	
+	</div>
+
+
+	<div class="panel-footer text-right">
+		<i class="pull-left text-danger"></i>
+		<button ng-click="create()" class="btn btn-success">
+			<b class="glyphicon glyphicon-plus" style="font-variant: small-caps;">Create</b>
+		</button>
+	</div>		
+	</div>
+</div>
+</form>
+</main>
+</html>

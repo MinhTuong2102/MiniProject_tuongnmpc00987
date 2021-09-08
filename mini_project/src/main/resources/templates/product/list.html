@@ -1,0 +1,14 @@
+<html xmlns:th="http://www.thymeleaf.org" th:replace="~{/layout/index::dynamic(~{::main})}">
+    <body>
+        <main class="row" style="text-align: center; font-variant: small-caps ; font-weight: bold;">
+            <div th:each="p:${items}" class="col-sm-4">
+            	<a th:href="@{|/product/detail/${p.id}|}">
+            		<img id="anh" th:src="@{|/assets/images/${p.image}|}">
+            	</a>
+            	<div th:text="${p.name}"></div>
+            	<div th:text="${p.price}" style=" margin-bottom: 60px;"></div>
+            </div>     
+        </main>
+    </body>
+</html>
+

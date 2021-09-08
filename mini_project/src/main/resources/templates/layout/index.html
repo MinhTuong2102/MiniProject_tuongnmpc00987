@@ -1,0 +1,147 @@
+<html xmlns:th="http://www.thymeleaf.org" th:fragment="dynamic(main)">
+
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>|WN-shoft</title>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<!-- Bosstrap -->
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+	integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+	crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+	integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+	crossorigin="anonymous"></script>
+<script
+	src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+	integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+	crossorigin="anonymous"></script>
+<script
+	src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+	integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+	crossorigin="anonymous"></script>
+<!-- AngularJS -->
+<script
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+<!-- CSS -->
+<link href="/assets/css/shopping-cart-app.css" rel="stylesheet" />
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+
+<!-- Footer -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+	<link rel="stylesheet" href="/assets/css/base.css">
+	<link rel="stylesheet" href="/assets/css/main.css">
+	<link rel="stylesheet" href="/assets/css/grid.css">
+	<link rel="stylesheet" href="/assets/css/responsive.css">
+	<link rel="stylesheet" href="/assets/fonts/fontawesome/css/all.min.css">
+	
+<!--End Footer -->
+<body class="container">
+	<header class="row"> </header>
+	<nav class="row">
+		<div th:replace="/layout/_menu.html"></div>
+	</nav>
+
+	<div class="row">
+		<nav class="col-sm-9">
+			<div th:insert="~{/layout/_carousel::carousel}"></div>
+		</nav>
+
+		<aside class="col-sm-3">
+			<div th:replace="/layout/_cart-info.html"></div>
+			<div th:replace="/layout/_category.html"></div>
+		</aside>
+	</div>
+	<br>
+	<div class="row">
+		<article class="col-sm-12">
+			<div th:replace="${main}"></div>
+		</article>
+	</div>
+	
+	<!-- Footer -->
+	<footer class="footer">
+			<div class="grid wide">
+				<div class="grid__row">
+					<div class="col l-2-4 m-4 c-6">
+						<h3 class="footer__heading">Chăm sóc khách hàng</h3>
+						<ul class="footer-list">
+							<li class="footer-item">
+								<a href="#" class="footer-item__link">Trung tâm trợ giúp</a>
+							</li>
+							<li class="footer-item">
+								<a href="#" class="footer-item__link">|WN-shop Mall</a>
+							</li>
+							<li class="footer-item">
+								<a href="#" class="footer-item__link">Hướng dẫn mua hàng</a>
+							</li>
+						</ul>
+					</div>
+					<div class="col l-2-4 m-4 c-6">
+						<h3 class="footer__heading">Giới thiệu</h3>
+						<ul class="footer-list">
+							<li class="footer-item">
+								<a href="#" class="footer-item__link">Giới thiệu</a>
+							</li>
+							<li class="footer-item">
+								<a href="#" class="footer-item__link">Tuyển dụng</a>
+							</li>
+							<li class="footer-item">
+								<a href="#" class="footer-item__link">Điều khoản</a>
+							</li>
+						</ul>
+					</div>
+					<div class="col l-2-4 m-4 c-6">
+						<h3 class="footer__heading">Theo dõi</h3>
+						<ul class="footer-list">
+							<li class="footer-item">
+								<a href="#" class="footer-item__link">
+									<i class="fab fa-facebook footer-item__icon"></i>
+									Facebook
+								</a>
+							</li>
+							<li class="footer-item">
+								<a href="#" class="footer-item__link">
+									<i class="fab fa-instagram footer-item__icon"></i>
+									Instagram
+								</a>
+							</li>
+							<li class="footer-item">
+								<a href="#" class="footer-item__link">
+									<i class="fab fa-linkedin footer-item__icon"></i>
+								Linkedin</a>
+							</li>
+						</ul>
+					</div>
+					<div class="col l-2-4 m-8 c-6">
+						<h3 class="footer__heading">Vào cửa hàng trên ứng dụng</h3>
+						<div class="footer__download">
+							<img src="/assets/images/qrcode.png" class="footer__download-qr">
+							<div class="footer__download-apps">
+								<a href="#" class="footer__download-app-link">
+									<img src="/assets/images/ch_play.png" class="footer__download-app-img">
+								</a>
+
+								<a href="#" class="footer__download-app-link">
+									<img src="/assets/images/apstore.png" class="footer__download-app-img">
+								</a>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+			<div class="footer__bottom">
+				<div class="grid wide">
+					<p class="footer__text">@2021 - Bản quyền thuộc về Công ty |WN-shoft</p>
+				</div>
+			</div>
+	</footer>
+</body>
+</html>
